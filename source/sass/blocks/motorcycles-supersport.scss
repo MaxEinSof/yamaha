@@ -1,0 +1,61 @@
+.motorcycles-supersport {
+  font-size: 13px;
+  text-align: center;
+  border-bottom: 1px solid $gray-color;
+
+  ul {
+    @include list;
+    @include container($desktop-width, 36px, 36px);
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  li {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+    min-width: 220px;
+  }
+
+  a {
+    display: block;
+    height: 100%;
+    padding-top: 23px;
+    padding-bottom: 13px;
+    color: $black-color;
+    border-bottom: 3px solid transparent;
+
+    &.current {
+      border-bottom-color: $orange-color;
+
+      &:hover,
+      &:focus {
+        opacity: 1;
+      }
+    }
+  }
+
+  figure {
+    margin: 0;
+  }
+
+  figcaption {
+    padding-top: 11px;
+  }
+}
+
+@media (max-width: $tablet-width - 1) {
+  .motorcycles-supersport {
+    ul {
+      flex-direction: column;
+      margin-left: 0;
+    }
+
+    li {
+      display: flex;
+      justify-content: center;
+      max-width: none;
+      margin-left: 0;
+    }
+  }
+}

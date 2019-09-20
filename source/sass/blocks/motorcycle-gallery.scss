@@ -1,0 +1,40 @@
+.motorcycle-gallery {
+  display: flex;
+  max-height: 514px;
+
+  picture {
+    flex-grow: 1;
+  }
+
+  img {
+    display: block;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.motorcycle-gallery__column {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+
+  picture {
+    height: 50%;
+  }
+}
+
+@media (max-width: $tablet-width - 1) {
+  .motorcycle-gallery {
+    flex-direction: column;
+    max-height: none;
+  }
+
+  .motorcycle-gallery__column {
+    flex-direction: row;
+
+    picture {
+      width: 50%;
+    }
+  }
+}

@@ -1,0 +1,134 @@
+.header {
+  border-bottom: 1px solid $gray-color;
+}
+
+.header__navigation {
+  @include container($desktop-width, 0, 0);
+  display: flex;
+  text-transform: uppercase;
+}
+
+.header__logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100px;
+  min-width: 70px;
+  padding-top: 12px;
+  padding-left: 1px;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: $white-color;
+  background-color: $orange-color;
+
+  img {
+    display: block;
+  }
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.header__main-navigation {
+  @include list;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 800px;
+  letter-spacing: 0.02em;
+
+  li {
+    display: flex;
+  }
+
+  a {
+    display: flex;
+    align-items: center;
+    padding-top: 16px;
+    padding-left: 35px;
+    padding-right: 35px;
+    padding-bottom: 10px;
+    color: $black-color;
+    border-bottom: 3px solid transparent;
+
+    &.current {
+      border-bottom-color: $orange-color;
+    }
+  }
+}
+
+.header__user-navigation {
+  display: flex;
+  max-width: 600px;
+  margin-left: auto;
+  padding-top: 41px;
+  padding-left: 33px;
+  padding-right: 47px;
+  padding-bottom: 39px;
+  font-size: 12px;
+  letter-spacing: 0.02em;
+
+  .header__search {
+    flex-shrink: 0;
+    width: 18px;
+    height: 18px;
+    background: url("../img/icon-search.svg") no-repeat 0 0;
+  }
+}
+
+.header__user-navigation-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  text-align: right;
+
+  a {
+    margin-right: 33px;
+    color: $black-color;
+  }
+}
+
+@media (max-width: $tablet-width - 1) {
+  .header__navigation {
+    flex-direction: column;
+  }
+
+  .header__logo {
+    width: auto;
+    padding-bottom: 7px;
+  }
+
+  .header__main-navigation {
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+    margin-bottom: 10px;
+
+    a {
+      padding-top: 15px;
+      padding-bottom: 12px;
+    }
+  }
+
+  .header__user-navigation {
+    flex-direction: column;
+    align-items: center;
+    max-width: none;
+    margin-left: 0;
+    padding-top: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+  }
+
+  .header__user-navigation-links {
+    flex-direction: column;
+    align-items: center;
+
+    a {
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+  }
+}

@@ -1,0 +1,34 @@
+.motorcycle-360view {
+  @include container($desktop-width, 56px, 50px);
+  display: flex;
+  justify-content: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  figure {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+  }
+
+  figcaption {
+    align-self: center;
+    margin-top: -4px;
+    padding-left: 46px;
+    text-transform: uppercase;
+    background: url("../img/icon-360.svg") no-repeat 14px 0;
+  }
+}
+
+@media (max-width: $tablet-width - 1) {
+  .motorcycle-360view {
+    padding-left: 40px;
+    padding-right: 40px;
+
+    figcaption {
+      margin-top: 0;
+      padding-left: 40px;
+      background-position: 8px 0;
+    }
+  }
+}

@@ -1,0 +1,225 @@
+.motorcycle-header {
+  @include container($desktop-width, 0, 0);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 107px;
+}
+
+.motorcycle-header__description {
+  display: flex;
+  flex-direction: column;
+  order: 2;
+  max-width: 538px;
+  padding-left: 10px;
+  padding-right: 66px;
+
+  h2 {
+    flex-shrink: 0;
+    max-width: 250px;
+    margin: 0;
+    margin-right: 34px;
+    font-size: 75px;
+    line-height: 90px;
+    font-weight: 500;
+  }
+}
+
+.motorcycle-header__title-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 2px;
+}
+
+.motorcycle-header__build-year {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 10px;
+
+  a {
+    color: $dark-gray-color;
+  }
+
+  .current {
+    color: $orange-color;
+
+    &:hover,
+    &:focus {
+      opacity: 1;
+    }
+  }
+
+  span {
+    margin-left: 12px;
+    margin-right: 12px;
+    color: $light-gray-color;
+  }
+}
+
+.motorcycle-header__price {
+  margin: 0;
+  margin-bottom: 26px;
+  font-size: 12.5px;
+  text-transform: uppercase;
+  color: $dark-gray-color;
+
+  span {
+    display: block;
+    font-size: 25px;
+    line-height: 30px;
+    color: $black-color;
+  }
+}
+
+.motorcycle-header__colors {
+  margin-bottom: 29px;
+
+  button {
+    margin-right: 17px;
+    padding: 0;
+    width: 24px;
+    height: 24px;
+    border: 1px solid #cacbce;
+    border-radius: 50%;
+    box-shadow: inset 0 0 0 2px $white-color;
+    background-color: transparent;
+    cursor: pointer;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:hover,
+    &:focus {
+      border-color: $black-color;
+    }
+
+    &:active {
+      border-color: $orange-color;
+    }
+  }
+
+  .current {
+    border-color: $orange-color;
+
+    &:hover,
+    &:focus {
+      border-color: $orange-color;
+    }
+  }
+}
+
+.motorcycle-header__color-blue-gray {
+  background-image: linear-gradient(to bottom,#5c68b5,#5c68b5 50%,#adacaa 50%,#adacaa 100%);
+}
+
+.motorcycle-header__color-black-gray {
+  background-image: linear-gradient(to bottom,#545351,#545351 50%,#adacaa 50%,#adacaa 100%);
+}
+
+.motorcycle-header__color-yellow-black {
+  background-image: linear-gradient(to bottom,#f5cc22,#f5cc22 50%,#383735 50%,#383735 100%);
+}
+
+.motorcycle-header__description-text {
+  margin: 0;
+  margin-bottom: 30px;
+  font-family: $secondary-font;
+  font-size: 17px;
+  line-height: 28px;
+  font-weight: 400;
+}
+
+.motorcycle-header__buttons {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 2px;
+  text-transform: uppercase;
+
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 180px;
+    width: 45.4%;
+    min-height: 60px;
+    margin-right: 14px;
+    margin-bottom: 10px;
+    padding: 10px 15px;
+    border-radius: 4px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.motorcycle-header__dealer-button {
+  color: $white-color;
+  background-color: $orange-color;
+}
+
+.motorcycle-header__specs-button {
+  color: $orange-color;
+  border: 3px solid $orange-color;
+
+  &:hover,
+  &:focus {
+    color: $white-color;
+    background-color: $orange-color;
+  }
+}
+
+.motorcycle-header__illustration {
+  order: 1;
+  width: 759px;
+  padding-top: 13px;
+  background:
+    url("../img/illustration-plus.png") no-repeat 10% 52.3% / 4.2% auto,
+    url("../img/illustration-plus.png") no-repeat 52.3% 14.5% / 4.2% auto,
+    url("../img/illustration-plus.png") no-repeat 87.9% 51.1% / 4.2% auto,
+    url("../img/power.jpg") no-repeat 48% 0 / 78.2% auto;
+}
+
+@media (max-width: $tablet-width - 1) {
+  .motorcycle-header {
+    flex-wrap: wrap;
+    padding-top: 50px;
+  }
+
+  .motorcycle-header__description {
+    padding: 0 20px;
+
+    h2 {
+      max-width: none;
+      width: 100%;
+      margin-right: 0;
+      text-align: center;
+    }
+  }
+
+  .motorcycle-header__title-row {
+    justify-content: center;
+  }
+
+  .motorcycle-header__price {
+    text-align: center;
+  }
+
+  .motorcycle-header__colors {
+    display: flex;
+    justify-content: center;
+  }
+
+  .motorcycle-header__buttons {
+    padding-left: 0;
+
+    a {
+      min-width: 0;
+      width: 100%;
+      margin-right: 0;
+    }
+  }
+}

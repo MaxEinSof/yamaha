@@ -1,0 +1,133 @@
+.motorcycle-extras {
+  @include container($desktop-width, 50px, 50px);
+  padding-top: 48px;
+  padding-bottom: 62px;
+  text-transform: uppercase;
+}
+
+.motorcycle-extras__technologies {
+  @include list;
+  @include container(920px, 0, 0);
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 54px;
+  font-size: 16.3px;
+
+  li {
+    flex-grow: 1;
+    margin-bottom: 20px;
+    padding: 0 20px;
+    text-align: center;
+  }
+
+  a {
+    color: $black-color;
+    opacity: 0.53;
+
+    &:hover,
+    &:focus {
+      opacity: 0.8;
+    }
+
+    &:active {
+      opacity: 1;
+    }
+  }
+}
+
+.motorcycle-extras__additional-products {
+  @include list;
+  @include container(958px, 0, 0);
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 47px;
+  text-align: center;
+
+  li {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    margin-bottom: 30px;
+  }
+
+  .motorcycle-extras__product-title {
+    order: 2;
+    align-self: center;
+    color: $black-color;
+  }
+
+  h3 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  p {
+    order: 3;
+    margin: 0;
+    font-size: 14px;
+    color: #8d9095;
+  }
+
+  .motorcycle-extras__product-image {
+    order: 1;
+  }
+}
+
+.motorcycle-extras__gloves {
+  padding-top: 28px;
+  padding-left: 40px;
+  padding-right: 40px;
+
+  .motorcycle-extras__product-title {
+    margin-top: 19px;
+  }
+}
+
+.motorcycle-extras__jacket {
+  padding-right: 16px;
+
+  .motorcycle-extras__product-title {
+    margin-top: -4px;
+    margin-left: 12px;
+  }
+
+  p {
+    padding-left: 12px;
+  }
+}
+
+.motorcycle-extras__helmet {
+  padding-top: 10px;
+  padding-left: 40px;
+  padding-right: 40px;
+
+  .motorcycle-extras__product-title {
+    margin-top: 16px;
+    margin-left: 12px;
+  }
+
+  p {
+    padding-left: 12px;
+  }
+}
+
+@media (max-width: $tablet-width - 1) {
+  .motorcycle-extras {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .motorcycle-extras__technologies {
+    flex-direction: column;
+
+    li {
+      padding: 0;
+    }
+  }
+
+  .motorcycle-extras__additional-products {
+    flex-direction: column;
+    padding-left: 0;
+  }
+}
